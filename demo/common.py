@@ -89,4 +89,7 @@ class Ops:
         
         return ao3
 
-
+class Lambda:
+    def make(self, x):
+        b = lambda a: a*2*x
+        return b(5)

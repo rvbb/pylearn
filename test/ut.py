@@ -47,4 +47,8 @@ def main():
     r1 = "abc"[::-1]
     print(r1)   
 
+    #Lambda
+    lamb = c.Lambda()
+    print(lamb.make(5))
+
 main()    
