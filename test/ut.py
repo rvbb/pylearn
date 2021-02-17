@@ -3,7 +3,8 @@ import sys
 # sys.path.insert(1, 'Z:/code/mine/pylearn/demo')
 sys.path.append("./demo")
 import pkgb as b
-import pkga.obj1 as a1
+#import pkga.obj1 as a1
+from pkga import obj1 as a1
 # import pkga.obj2 as a2 # --> make Error ModuleNotFoundError: No module named 'obj1' in obj2.py
 import common as c
 

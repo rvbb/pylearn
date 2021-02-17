@@ -28,6 +28,7 @@ class Common:
         y = json.dumps(x)
         print(y)
 
+#not ordered, allow duplicate, allow None
 class List:
     def make_alist(self):
         alist = [1,2,3,"123",'one']
@@ -35,6 +36,9 @@ class List:
         print("list=", alist)
         alist.append("two")
         print("after", alist)
+
+        matrix = [[1,2], ['one', 'two']]
+        print("matrix", matrix)
 
     def remove_duplicate(self):
         l = [1,1,2,2,3]
@@ -54,12 +58,12 @@ class Tuple:
 # Orderd, unchangeble(Immutable), NOT allow dupplicate
 class Set:
     def make(self):
-        s = {5,1,2,'', None, None}
+        s = {5,1,2,'', None}
         s1 = set((1,2, 3.4))
         print("set={0}, {1}".format(s, s1))
 
 
-# unOrderd, changeble, NOT allow dupplicate
+# unOrderd, changeble, NOT allow dupplicate, allow one None key
 class AnyObject:
     def __init__(self, a, b):
         self.aa = a
@@ -67,8 +71,8 @@ class AnyObject:
 
 class Dict:
     def make(self):
-        d = {"k1":5,"k2":"xxx", 1:2, "t":None, "t1":None}        
-        print("dictionary=", d[1]) 
+        d = {"k1":5,"k2":"xxx", 1:2, "t":None, "t1":None, None: '123', 'None': '123'}
+        print("dictionary=", d) 
 
     def of(self, any_object):
         print("aa={0}, b= {1}".format(any_object.aa, any_object.bb))
